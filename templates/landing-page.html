@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+  <script
+    src="https://kit.fontawesome.com/6b27559972.js"
+    crossorigin="anonymous"
+  ></script>
+  <title>Landing Page</title>
+</head>
+<body>
+  <div class="headerImgContainer">
+    <img
+      class="headerLogo"
+      src="{{ url_for('static', filename='images/logo2.png') }}"
+      alt="logo"
+    />
+  </div>
+  <div class="mainSectionHeader">
+    <h1 id="mainSectionHeader">Leave it to the professionals</h1>
+  </div>
+  <div id="customerForm">
+    <form action="/submit" method="post" id="customerInfo">
+      <label for="firstName" class="inputFieldLabels">First Name: </label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        class="inputField"
+        requred
+      />
+      <label for="lastName" class="inputFieldLabels">Last Name: </label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        class="inputField"
+        required
+      />
+      <label for="email" class="inputFieldLabels">Email: </label>
+      <input type="email" name="email" id="email" class="inputField" required />
+      <label for="phone" class="inputFieldLabels">Phone: </label>
+      <input type="tel" name="phone" id="phone" class="inputField" />
+      <input id="submitBtn" type="submit" value="Choose Excellence" />
+    </form>
+  </div>
+</body>
+<footer>
+  <p class="footerText">BL Performance 580 SE Oak St Roseburg, OR 97470</p>
+</footer>
